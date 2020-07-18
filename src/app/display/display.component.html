@@ -1,0 +1,11 @@
+
+<button class="btn btn-primary btn-block mt-3" (click)="onDisplayClick()">Display Details</button>
+<p class="text-center mt-3" *ngIf="onShow">My Angular Knowledge</p>
+<p 
+class="text-center mt-3" 
+*ngFor="let stamp of timeStamps; let idx = index"
+[ngStyle]="{backgroundColor: idx>=5 ? 'blue' : 'transparent'}"
+[ngClass]="{textWhite: idx>=5}">
+    {{stamp}}
+</p>
+
